@@ -8,29 +8,6 @@ module.exports = yeoman.generators.Base.extend({
     this.pkg = require('../package.json');
   },
 
-  prompting: function () {
-    var done = this.async();
-
-    // Have Yeoman greet the user.
-    this.log(yosay(
-      'Welcome to the best ' + chalk.red('GulpBabel') + ' generator!'
-    ));
-
-    var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
-
-    this.prompt(prompts, function (props) {
-      this.props = props;
-      // To access props later use this.props.someOption;
-
-      done();
-    }.bind(this));
-  },
-
   writing: {
     app: function () {
       this.fs.copy(
@@ -40,10 +17,6 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copy(
         this.templatePath('_bower.json'),
         this.destinationPath('bower.json')
-      );
-      this.fs.copy(
-        this.templatePath('_gulpfile.js'),
-        this.destinationPath('gulpfile.js')
       );
     },
 
@@ -59,6 +32,22 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copy(
         this.templatePath('gitignore'),
         this.destinationPath('.gitignore')
+      );
+      this.fs.copy(
+        this.templatePath('_gulpfile.js'),
+        this.destinationPath('gulpfile.js')
+      );
+      this.fs.copy(
+        this.templatePath('_README.md'),
+        this.destinationPath('README.md')
+      );
+      this.fs.copy(
+        this.templatePath('_index.js'),
+        this.destinationPath('index.js')
+      );
+      this.fs.copy(
+        this.templatePath('lib/aclass.js'),
+        this.destinationPath('lib/aclass.js')
       );
     }
   },
