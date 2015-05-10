@@ -41,6 +41,10 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('_bower.json'),
         this.destinationPath('bower.json')
       );
+      this.fs.copy(
+        this.templatePath('_gulpfile.js'),
+        this.destinationPath('gulpfile.js')
+      );
     },
 
     projectfiles: function () {
@@ -49,8 +53,12 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('.editorconfig')
       );
       this.fs.copy(
-        this.templatePath('jshintrc'),
-        this.destinationPath('.jshintrc')
+        this.templatePath('eslintrc'),
+        this.destinationPath('.eslintrc')
+      );
+      this.fs.copy(
+        this.templatePath('gitignore'),
+        this.destinationPath('.gitignore')
       );
     }
   },
