@@ -1,0 +1,30 @@
+{
+  "name": "generator-gulp-babel",
+  "version": "0.0.1",
+  "description": "gulp babel yo generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "PAIO-CO-KR/generator-gulp-babel",
+  "author": {
+    "name": "PAIO co.,ltd.",
+    "email": "apple@paio.co.kr",
+    "url": "https://github.com/PAIO-CO-KR"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.19.0",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
