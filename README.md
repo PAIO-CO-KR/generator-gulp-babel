@@ -32,7 +32,7 @@ npm install -g generator-gulp-babel
 Finally, initiate the generator:
 
 ```bash
-yo generator gulp babel
+yo gulp-babel
 ```
 
 ### Getting To Know Yeoman
