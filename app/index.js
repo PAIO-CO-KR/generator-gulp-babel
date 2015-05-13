@@ -46,8 +46,8 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('index.js')
       );
       this.fs.copy(
-        this.templatePath('lib/aclass.js'),
-        this.destinationPath('lib/aclass.js')
+        this.templatePath('src/aclass.js'),
+        this.destinationPath('src/aclass.js')
       );
     }
   },
