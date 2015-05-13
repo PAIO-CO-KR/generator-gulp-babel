@@ -1,6 +1,6 @@
 {
   "name": "generator-gulp-babel",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "gulp babel yo generator",
   "license": "MIT",
   "main": "app/index.js",
